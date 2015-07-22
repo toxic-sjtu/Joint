@@ -12,7 +12,7 @@
 
 class RandomForest {
 public:
-	std::vector<std::vector<Tree>> rfs;
+	std::vector<std::vector<Tree>> trees;
 	// number of trees
 	int numTrees;
 	// number of landmarks
@@ -28,9 +28,9 @@ public:
 		maxDepth = GlobalParams::depth;
 
 		// resize the random forest
-		rfs.resize(numTrees);
+		trees.resize(numTrees);
 		for (int i = 0; i < numTrees; i++) {
-			rfs.resize(numLandmarks);
+			trees.resize(numLandmarks);
 		}
 	}
 	
