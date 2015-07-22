@@ -161,6 +161,7 @@
     <ClInclude Include="blas.h" />
     <ClInclude Include="blasp.h" />
     <ClInclude Include="joint.h" />
+    <ClInclude Include="jointRegressor.h" />
     <ClInclude Include="randomForest.h" />
     <ClInclude Include="sample.h" />
     <ClInclude Include="tree.h" />
