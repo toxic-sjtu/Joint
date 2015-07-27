@@ -22,5 +22,6 @@
     <ClCompile Include="dscal.c" />
     <ClCompile Include="linear.cpp" />
     <ClCompile Include="tron.cpp" />
+    <ClCompile Include="jointRegressor.cpp" />
   </ItemGroup>
 </Project>

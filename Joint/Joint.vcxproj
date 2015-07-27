@@ -153,6 +153,7 @@
     <ClCompile Include="dnrm2.c" />
     <ClCompile Include="dscal.c" />
     <ClCompile Include="joint.cpp" />
+    <ClCompile Include="jointRegressor.cpp" />
     <ClCompile Include="linear.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="randomForest.cpp" />

@@ -13,10 +13,13 @@
 class JointRegressor {
 public:
 	std::vector<RandomForest> forests;
-	std::vector<std::vector<struct model*>> models;
+	std::vector<std::vector<model*>> models;
 	Shape meanShape;
+	std::vector<Sample> posSamples;
 	std::vector<Sample> samples;
 	int totalStages;
+	feature_node ** binFeatures;
+	feature_node ** posBinFeatures;
 public:
 	JointRegressor() {
 		totalStages = GlobalParams::stages;
@@ -36,15 +39,14 @@ public:
 		int numSamples);
 	int GetCodeFromTree(
 		const Tree& tree,
-		const vector<Sample>& samples
+		const Sample& sample,
+		const Mat_<double> &rotation,
+		const double scale
 		);
-	void GlobalRegression(
-		feature_node ** binfeatures,
-		const std::vector<Sample> &samples,
-		int stages
-		);
+	void GlobalRegression(int stages);
 
-	void Train(const std::vector<Sample>& samples);
+	void Train(std::vector<Sample>& samples);
+	void ReleaseFeatures(feature_node ** binFeatures, int numSamples);
 };
 
 #endif
