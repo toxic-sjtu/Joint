@@ -1,5 +1,12 @@
-#include "tree.h"
+//
+//  tree.cpp
+//	
+//	implementation for hough tree
+//
+//	Toxic
+//
 
+#include "tree.h"
 void Tree::Train(vector<Sample> &samples,
 	const Mat_<double> &meanShape,
 	int stages_,
